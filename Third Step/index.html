@@ -6,9 +6,8 @@
 
   </head>
   <body>
-    <div id="app-7">
+    <div id="todo-list">
       <ol>
-        <!-- Crée une instance du composant todo-list -->
         <todo-item>
           <ol>
             <li v-for="todo in todos">{{todo.text}}</li>
@@ -22,8 +21,7 @@
       <button type="submit" onclick="addTodo();" name="button">Ajouter à la liste</button>
     </form>
 
-    <!-- development version, includes helpful console warnings -->
-    <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="vue.js"></script>
     <style media="screen">
       div {
