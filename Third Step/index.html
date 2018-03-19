@@ -8,24 +8,42 @@
   <body>
     <div id="todo-list">
       <ol>
-        <todo-item>
-          <ol>
-            <li v-for="todo in todos">{{todo.text}}</li>
-          </ol>
-        </todo-item>
+        <li v-for="todo in todos">{{todo.text}}</li>
       </ol>
     </div>
-
-    <form action="javascript:void(0);">
-      <input id="todo-add" type="text">
-      <button type="submit" onclick="addTodo();" name="button">Ajouter à la liste</button>
-    </form>
+    <div class="form-control">
+      <form action="javascript:void(0);">
+        <p>Merci de renseigner un élément à ajouter à la liste</p>
+        <input id="todo-add" type="text">
+        <button type="submit" onclick="addTodo();" name="button">Ajouter à la liste</button>
+      </form>
+      <form action="javascript:void(0)">
+        <p>Merci de renseigner le numéros à supprimer</p>
+        <input id="todo-delete" type="text">
+        <button type="submit" onclick="deleteTodo();" name="button">Supprimer de la liste</button>
+      </form>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="vue.js"></script>
     <style media="screen">
+      body {
+        margin: auto;
+        max-width: 800px;
+      }
       div {
         margin-bottom: 20px;
+      }
+      #todo-list ol {
+        text-align: center;
+        list-style-position: inside;
+      }
+      .form-control {
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-between;
       }
     </style>
   </body>
