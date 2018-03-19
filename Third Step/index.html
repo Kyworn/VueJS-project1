@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS</title>
+
+  </head>
+  <body>
+    <div id="app-7">
+      <ol>
+        <!-- Crée une instance du composant todo-list -->
+        <todo-item>
+          <ol>
+            <li v-for="todo in todos">{{todo.text}}</li>
+          </ol>
+        </todo-item>
+      </ol>
+    </div>
+
+    <form action="javascript:void(0);">
+      <input id="todo-add" type="text">
+      <button type="submit" onclick="addTodo();" name="button">Ajouter à la liste</button>
+    </form>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="vue.js"></script>
+    <style media="screen">
+      div {
+        margin-bottom: 20px;
+      }
+    </style>
+  </body>
+</html>
