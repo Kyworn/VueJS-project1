@@ -17,3 +17,10 @@ var app7 = new Vue({
     ]
   }
 })
+
+var exemple = new Vue({
+  el: '#example',
+  data: {
+    message: 'test'
+  }
+})
